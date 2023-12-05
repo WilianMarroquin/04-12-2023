@@ -9,9 +9,12 @@
         body {
             margin: 0;
             padding: 0;
-            min-height: 100vh;
             background-color: #ffc4c4;
             font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         #collage-container {
@@ -24,8 +27,8 @@
 
         .image {
             margin: 10px;
+            max-width: 400px;
             width: 100%;
-            max-width: 200px;
             height: auto;
             object-fit: cover;
             border-radius: 8px;
@@ -49,7 +52,8 @@
             font-size: 32px;
             margin-bottom: 20px;
         }
-           button {
+
+        button {
             margin: 10px;
             padding: 10px 20px;
             font-size: 18px;
@@ -62,25 +66,28 @@
             transition: background-color 0.3s;
         }
 
-        p {
+        p, h2 {
             color: #333;
             text-align: center;
             font-size: 18px;
+            margin-bottom: 20px;
         }
-           footer {
+
+        header {
+            background-color: #ff4081;
+            /* Color de fondo rosa fuerte */
+            width: 100%;
+            text-align: center;
+        }
+
+        footer {
             text-align: center;
             padding: 10px;
             background-color: #ff4081;
             /* Color de fondo rosa fuerte */
-            margin-top: 20px;
+            position: fixed;
             bottom: 0;
             width: 100%;
-        }
-         header {
-            background-color: #ff4081;
-            /* Color de fondo rosa fuerte */
-            padding: 20px;
-            text-align: center;
         }
           section {
             max-width: 80%;
@@ -96,40 +103,38 @@
 
 <body>
     <header>
-        <h1>Final de la Guerra!</h1>
+        <h1 style="font-weight: 900;">Final de la Guerra!</h1>
         <p></p>
     </header>
-    <h1>17/12/2022 (Te conoci viendo tu perfil!)</h1>
 
-    <div id="collage-container">
-        <img src="imagenes/imagen1.jpg" alt="Imagen 1" class="image">
-        <img src="imagenes/imagen2.jpg" alt="Imagen 2" class="image">
-        <img src="imagenes/imagen3.jpg" alt="Imagen 3" class="image">
-        <!-- Agrega más imágenes según sea necesario -->
+    <h1 style="font-weight: 900;">05/12/2023</h1>
 
-        <!-- Agrega corazones a las imágenes -->
-       
-    </div>
-    <div id="collage-container">
-        <span class="heart">&#10084;</span>
-        <span class="heart">&#10084;</span>
-        <span class="heart">&#10084;</span>        
-    </div>
     <section>
-        <p style="color:white">¡Son algunas de las fotos que llamaron mi atención!</p>
+        <h2 style="text-align: center; color:white;">Lo proximo que veras es muy importante!</h2>
     </section>
     
+    <section>
+        <p style="color: white;">Puedes detenerte ahora y verlo despues...</p>   
+    </section>
+
+
     <div id="collage-container">
-        <button onclick="siguientePagina()">Siguiente</button>
+        <span class="heart">&#10084;</span>
+        <span class="heart">&#10084;</span>
+        <span class="heart">&#10084;</span>
     </div>
+
+
+    <button onclick="siguientePagina()">Siguiente</button>
+
+    <script>
+        function siguientePagina() {
+            window.location.href = "paginaFinal.html";
+        }
+    </script>
     <footer>
         <h2 style="color: white;">Espero recibir muchas paletas!!!</h2>
     </footer>
 </body>
-<script>
-    function siguientePagina() {
-        window.location.href = "primeraConversacion.html";
-    }
-</script>
 
 </html>

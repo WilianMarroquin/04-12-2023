@@ -9,9 +9,12 @@
         body {
             margin: 0;
             padding: 0;
-            min-height: 100vh;
             background-color: #ffc4c4;
             font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         #collage-container {
@@ -24,8 +27,8 @@
 
         .image {
             margin: 10px;
+            max-width: 400px;
             width: 100%;
-            max-width: 200px;
             height: auto;
             object-fit: cover;
             border-radius: 8px;
@@ -49,7 +52,8 @@
             font-size: 32px;
             margin-bottom: 20px;
         }
-           button {
+
+        button {
             margin: 10px;
             padding: 10px 20px;
             font-size: 18px;
@@ -66,70 +70,69 @@
             color: #333;
             text-align: center;
             font-size: 18px;
+            margin-bottom: 20px;
         }
            footer {
             text-align: center;
             padding: 10px;
             background-color: #ff4081;
             /* Color de fondo rosa fuerte */
-            margin-top: 20px;
+            position: fixed;
             bottom: 0;
             width: 100%;
         }
          header {
             background-color: #ff4081;
             /* Color de fondo rosa fuerte */
-            padding: 20px;
+            width: 100%;
             text-align: center;
         }
-          section {
-            max-width: 80%;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #ff4081;
-            /* Fondo blanco */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+             .image {
+            margin: 10px;
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
         }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
+
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Final de la Guerra!</h1>
-        <p></p>
-    </header>
-    <h1>17/12/2022 (Te conoci viendo tu perfil!)</h1>
+<header>
+    <h1>Final de la Guerra!</h1>
+    <p></p>
+</header>
 
-    <div id="collage-container">
-        <img src="imagenes/imagen1.jpg" alt="Imagen 1" class="image">
-        <img src="imagenes/imagen2.jpg" alt="Imagen 2" class="image">
-        <img src="imagenes/imagen3.jpg" alt="Imagen 3" class="image">
-        <!-- Agrega más imágenes según sea necesario -->
+    <h1>Como me gusta que me hagas caso! jej</h1>
 
-        <!-- Agrega corazones a las imágenes -->
-       
-    </div>
+    <img src="imagenes/imagenInicial.jpg" alt="" class="image">
+
+
     <div id="collage-container">
         <span class="heart">&#10084;</span>
         <span class="heart">&#10084;</span>
-        <span class="heart">&#10084;</span>        
+        <span class="heart">&#10084;</span>
     </div>
-    <section>
-        <p style="color:white">¡Son algunas de las fotos que llamaron mi atención!</p>
-    </section>
-    
-    <div id="collage-container">
-        <button onclick="siguientePagina()">Siguiente</button>
-    </div>
+
+
+    <button onclick="siguientePagina()">Siguiente</button>
+
+    <script>
+        function siguientePagina() {
+            window.location.href = "primerFoto.html";
+        }
+    </script>
     <footer>
         <h2 style="color: white;">Espero recibir muchas paletas!!!</h2>
     </footer>
 </body>
-<script>
-    function siguientePagina() {
-        window.location.href = "primeraConversacion.html";
-    }
-</script>
 
 </html>

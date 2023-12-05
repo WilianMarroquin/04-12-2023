@@ -12,6 +12,10 @@
             min-height: 100vh;
             background-color: #ffc4c4;
             font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         #collage-container {
@@ -24,8 +28,8 @@
 
         .image {
             margin: 10px;
+            max-width: 400px;
             width: 100%;
-            max-width: 200px;
             height: auto;
             object-fit: cover;
             border-radius: 8px;
@@ -49,7 +53,8 @@
             font-size: 32px;
             margin-bottom: 20px;
         }
-           button {
+
+        button {
             margin: 10px;
             padding: 10px 20px;
             font-size: 18px;
@@ -66,6 +71,13 @@
             color: #333;
             text-align: center;
             font-size: 18px;
+            margin-bottom: 20px;
+        }
+         header {
+            background-color: #ff4081;
+            /* Color de fondo rosa fuerte */
+            width: 100%;
+            text-align: center;
         }
            footer {
             text-align: center;
@@ -73,14 +85,8 @@
             background-color: #ff4081;
             /* Color de fondo rosa fuerte */
             margin-top: 20px;
-            bottom: 0;
+                bottom: 0;
             width: 100%;
-        }
-         header {
-            background-color: #ff4081;
-            /* Color de fondo rosa fuerte */
-            padding: 20px;
-            text-align: center;
         }
           section {
             max-width: 80%;
@@ -95,41 +101,38 @@
 </head>
 
 <body>
+
     <header>
         <h1>Final de la Guerra!</h1>
         <p></p>
     </header>
-    <h1>17/12/2022 (Te conoci viendo tu perfil!)</h1>
+
+    <h1>10/05/2023 (Te mande el primer mensaje!)</h1>
 
     <div id="collage-container">
-        <img src="imagenes/imagen1.jpg" alt="Imagen 1" class="image">
-        <img src="imagenes/imagen2.jpg" alt="Imagen 2" class="image">
-        <img src="imagenes/imagen3.jpg" alt="Imagen 3" class="image">
-        <!-- Agrega más imágenes según sea necesario -->
-
-        <!-- Agrega corazones a las imágenes -->
-       
+        <img src="imagenes/conversacion.jpg" alt="Imagen 1" class="image">
     </div>
+
     <div id="collage-container">
         <span class="heart">&#10084;</span>
         <span class="heart">&#10084;</span>
-        <span class="heart">&#10084;</span>        
+        <span class="heart">&#10084;</span>
     </div>
+
     <section>
-        <p style="color:white">¡Son algunas de las fotos que llamaron mi atención!</p>
+        <p style="color: white">Luego de meses de pensarlo (Planearlo) decidi escribirte!</p>
     </section>
-    
-    <div id="collage-container">
-        <button onclick="siguientePagina()">Siguiente</button>
-    </div>
+
+    <button onclick="siguientePagina()">Siguiente</button>
     <footer>
         <h2 style="color: white;">Espero recibir muchas paletas!!!</h2>
     </footer>
+
+    <script>
+        function siguientePagina() {
+            window.location.href = "TextoBonito.html";
+        }
+    </script>
 </body>
-<script>
-    function siguientePagina() {
-        window.location.href = "primeraConversacion.html";
-    }
-</script>
 
 </html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Nosotros!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ffc4c4;
+            /* Color de fondo rosa claro */
+            color: #333;
+            /* Fondo rojo claro */
+            font-family: 'Arial', sans-serif;
+        }
+
+        #container {
+            text-align: center;
+            background-color: #ff4081;
+            /* Fondo rojo oscuro */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 80%;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #fff;
+            /* Texto blanco */
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        #buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #f80000;
+            background-color: rgb(255, 255, 255);
+            /* Botón rojo claro */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff4d4d;
+            /* Botón rojo oscuro */
+        }
+
+        #btnNo {
+            background-color: #cc0000;
+            /* Botón rojo oscuro */
+            color: white;
+        }
+
+        #btnNo:hover {
+            background-color: #990000;
+            /* Botón rojo más oscuro */
+        }
+
+        img {
+            margin-top: 30px;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ff4081;
+            /* Color de fondo rosa fuerte */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        header {
+            background-color: #ff4081;
+            width: 100%;
+            padding: 15px;
+            position: absolute;
+            top: 0;
+            text-align: center;
+        }
+
+        #heart-container {
+            font-size: 24px;
+            color: #ff4d4d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .heart {
+            margin: 0 5px;
+        }
+    </style>
+    <script>
+        function accionParaCuandoEllaDIgaQueSi() {
+            const respuesta = confirm("¿Estás segura de ser mía uwu?");
+            if (respuesta) {
+                window.location.href = "acepta.html";
+            } else {
+                alert("Espero puedas considerarlo.");
+            }
+        }
+
+        function mueveElBoton() {
+            const newWidth = Math.random() * (300 - 5) + 5;
+            const newHeight = Math.random() * (700 - 5) + 5;
+
+            const btnNo = document.getElementById("btnNo");
+            btnNo.style.position = "absolute";
+            btnNo.style.left = newWidth + "px";
+            btnNo.style.top = newHeight + "px";
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>(Solo debes firmar)</h1>
+    </header>
+
+    <div id="container">
+        <h1>¿Te gustaría iniciar una nueva guerra conmigo? <span style="color: #ff6666;">❤️</span></h1>
+        <p>Esta nueva guerra sera duradera, muchas batallas dificiles y otras mas sensillas pero en todas ganaremos!!</p>
+
+        <div id="buttons">
+            <button onclick="accionParaCuandoEllaDIgaQueSi()" id="btnSi">¡Sí, quiero!</button>
+            <button style="color: white;" id="btnNo" onmouseover="mueveElBoton()">No, gracias</button>
+        </div>
+
+        <img src="https://us.123rf.com/450wm/rastudio/rastudio1608/rastudio160801244/61245002-pareja-en-el-dibujo-icono-del-amor
+        -del-vector-aislado-en-el-fondo-pareja-mano-dibujada-en-icono-del.jpg?ver=6" alt="" width="200">
+    </div>
+
+    <footer>
+        <h2 style="color: white;">¡Espero recibir muchas paletas de amor!</h2>
+    </footer>
+</body>
+
+</html>

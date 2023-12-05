@@ -4,42 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Nosotros!</title>
+    <title>Amor Eterno</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #ff7b7b;
-            /* Fondo rojo claro */
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffc4c4;
+            /* Color de fondo rosa claro */
+            color: #333;
         }
 
-        #container {
-            text-align: center;
-            background-color: #ff4d4d;
-            /* Fondo rojo oscuro */
+        header {
+            background-color: #ff4081;
+            /* Color de fondo rosa fuerte */
             padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 80%;
+            text-align: center;
         }
 
         h1 {
-            font-size: 24px;
             color: #fff;
-            /* Texto blanco */
+            font-size: 36px;
+            margin: 0;
         }
 
-        #buttons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
+        p {
+            color: #fff;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        section {
+            max-width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            /* Fondo blanco */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ff4081;
+            /* Color de fondo rosa fuerte */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
         button {
@@ -54,62 +67,57 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-
-        button:hover {
-            background-color: #ff4d4d;
-            /* Botón rojo oscuro */
+  
+           img {
+            margin: 10px;
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
+        }
+          img:hover {
+            transform: scale(1.1);
+        }
+          #container {
+            text-align: center;
+            
+            /* Fondo rojo oscuro */
+            border-radius: 15px;
+            width: 100%;
         }
 
-        #btnNo {
-            background-color: #cc0000;
-            /* Botón rojo oscuro */
-        }
-
-        #btnNo:hover {
-            background-color: #990000;
-            /* Botón rojo más oscuro */
-        }
-
-        img {
-            margin-top: 30px;
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
     </style>
-    <script>
-        function accionParaCuandoEllaDIgaQueSi() {
-            const respuesta = confirm("¿Estás segura de ser mía uwu?")
-            if (respuesta) {
-                window.location.href = "primerFoto.html";
-            } else {
-                alert("Espero puedas considerarlo.")
-            }
-        }
-
-        function mueveElBoton() {
-            const newWidth = Math.random() * (300 - 5) + 5;
-            const newHeight = Math.random() * (700 - 5) + 5;
-
-            const btnNo = document.getElementById("btnNo");
-            btnNo.style.position = "absolute";
-            btnNo.style.left = newWidth + "px";
-            btnNo.style.top = newHeight + "px";
-        }
-    </script>
 </head>
 
 <body>
-    <div id="container">
-        <h1>¿Quieres ser mi novia? <span style="color: #ff6666;">❤️</span></h1>
+    <header>
+        <h1>Final de la Guerra!</h1>
+        <p></p>
+    </header>
 
-        <div id="buttons">
-            <button onclick="accionParaCuandoEllaDIgaQueSi()" id="btnSi">Sí</button>
-            <button id="btnNo" onmouseover="mueveElBoton()">No</button>
+    <section>
+        <h2>Puedes seguir solo si prometes darme paletas!!</h2>
+        <div style="text-align: center;">
+            <button onclick="darClir()">Dale clic aca!!</button>
         </div>
-        <img src="https://us.123rf.com/450wm/rastudio/rastudio1608/rastudio160801244/61245002-pareja-en-el-dibujo-icono-del-amor
-        -del-vector-aislado-en-el-fondo-pareja-mano-dibujada-en-icono-del.jpg?ver=6" alt="" width="200">
+
+    </section>
+
+    <div id="container">
+        <img src="imagenes/imagenPostada.jpg" alt="" width="200">
     </div>
+
+    <footer>
+        <p>Espero recibir muchas paletas!!!</p>
+    </footer>
 </body>
+<script>
+    function darClir(){
+        window.location.href = "vacilar.html";
+    }
+</script>
 
 </html>
