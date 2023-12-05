@@ -1,12 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primer Foto</title>
+    <title>Collage Romántico de Imágenes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #ffc4c4;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #collage-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .image {
+            margin: 10px;
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
+
+        .heart {
+            color: #ff4d4d;
+            font-size: 24px;
+            margin: 5px;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+           button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #ff6666;
+            /* Botón rojo claro */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        p {
+            color: #333;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
 </head>
+
 <body>
-    
-    
+    <h1>07/10/2022 (Te conoci viendo tu perfil!)</h1>
+
+    <div id="collage-container">
+        <img src="imagenes/imagen1.jpg" alt="Imagen 1" class="image">
+        <img src="imagenes/imagen2.jpg" alt="Imagen 2" class="image">
+        <img src="imagenes/imagen3.jpg" alt="Imagen 3" class="image">
+        <!-- Agrega más imágenes según sea necesario -->
+
+        <!-- Agrega corazones a las imágenes -->
+       
+    </div>
+    <div id="collage-container">
+        <span class="heart">&#10084;</span>
+        <span class="heart">&#10084;</span>
+        <span class="heart">&#10084;</span>        
+    </div>
+    <p>¡Son algunas de las fotos que llamaron mi atención!</p>
+    <div id="collage-container">
+        <button onclick="siguientePagina()">Siguiente</button>
+    </div>
 </body>
+<script>
+    function siguientePagina() {
+        window.location.href = "opciones.html";
+    }
+</script>
+
 </html>
